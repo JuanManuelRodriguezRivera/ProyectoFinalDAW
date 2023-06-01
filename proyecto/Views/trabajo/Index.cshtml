@@ -1,0 +1,18 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@foreach (var trabajo in (IEnumerable<dynamic>) ViewData["trabajos"])
+{
+    <div class="card" style="width: 18rem;">
+        <img src="@trabajo.imagen" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">@trabajo.nombre</h5>
+            <p class="card-text">@trabajo.descripcion</p>
+            <p class="card-text">@trabajo.salario</p>
+        </div>
+    </div>
+}
+

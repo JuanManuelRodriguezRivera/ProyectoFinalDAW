@@ -1,0 +1,17 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@foreach (var recurso in (IEnumerable<dynamic>) ViewData["recursos"])
+{
+    <div class="card" style="width: 18rem;">
+        <img src="@recurso.media" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">@recurso.titulo</h5>
+            <p class="card-text">@recurso.descripcion</p>
+        </div>
+    </div>
+}
+
