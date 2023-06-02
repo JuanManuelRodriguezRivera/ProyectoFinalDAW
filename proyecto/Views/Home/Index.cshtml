@@ -1,8 +1,28 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Proyecto DAW";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+<div class="row">
+    @foreach (var trabajo in (IEnumerable<dynamic>)ViewData["trabajos"])
+    {
+        
+            
+
+        <div class="col-4">
+            <div class="card" style="width: 18rem;">
+                <img src="@trabajo.imagen" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">@trabajo.nombre</h5>
+                    <p class="card-text">@trabajo.descripcion</p>
+                    <p class="card-text"><strong>$ @trabajo.salario</strong></p>
+                    <a href='trabajo/dtrabajo/@trabajo.id_trabajo' class="btn btn-success"> Leer mas...</a>
+                </div>
+            </div>
+        </div>
+        
+
+    }
 </div>
+
+

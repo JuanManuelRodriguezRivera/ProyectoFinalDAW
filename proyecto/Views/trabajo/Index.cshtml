@@ -4,6 +4,10 @@
 @{
 }
 
+@{
+    ViewData["Title"] = "Listado Trabajo";
+}
+
 <div class="row">
     @foreach (var trabajo in (IEnumerable<dynamic>)ViewData["trabajos"])
     {
