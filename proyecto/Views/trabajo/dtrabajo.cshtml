@@ -1,0 +1,22 @@
+﻿@model proyecto.Models.trabajo
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<div class="card" style="width: 18rem;">
+    <div class="card-header">
+        @Html.DisplayFor(trabajo => trabajo.nombre)
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+            <img src='@Html.DisplayFor(trabajo => trabajo.imagen)' />
+        </li>
+        <li class="list-group-item">Descripcion: @Html.DisplayFor(trabajo => trabajo.descripcion)</li>
+        <li class="list-group-item">Empresa: @Html.DisplayFor(trabajo => trabajo.empresa_id)</li>
+        <li class="list-group-item">Descripcion: @Html.DisplayFor(trabajo => trabajo.salario)</li>
+        <li class="list-group-item">Salario: @Html.DisplayFor(trabajo => trabajo.departamento_id)</li>
+    </ul>
+</div>

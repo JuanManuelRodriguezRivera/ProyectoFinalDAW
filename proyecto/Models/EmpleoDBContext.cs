@@ -11,5 +11,9 @@ namespace proyecto.Models
         }
         public DbSet<trabajo> trabajo { get; set; }
         public DbSet<recursos> recursos { get; set; }
+
+        public DbSet<empresa> empresa { get; set; }
+
+        public DbSet<departamento> departamento{ get; set;}
     }
 }
